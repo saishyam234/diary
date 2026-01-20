@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diary App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-4">
+    <h2 class="text-center">📔 Diary App</h2>
+
+    <button class="btn btn-danger mb-3" onclick="logout()">Logout</button>
+
+    <div class="card p-3 mb-3">
+        <input id="su_user" class="form-control mb-2" placeholder="Signup Username">
+        <input id="su_pass" class="form-control mb-2" type="password" placeholder="Password">
+        <button class="btn btn-primary" onclick="signup()">Signup</button>
+    </div>
+
+    <div class="card p-3 mb-3">
+        <input id="li_user" class="form-control mb-2" placeholder="Login Username">
+        <input id="li_pass" class="form-control mb-2" type="password" placeholder="Password">
+        <button class="btn btn-success" onclick="login()">Login</button>
+    </div>
+
+    <div class="card p-3 mb-3">
+        <input id="title" class="form-control mb-2" placeholder="Title">
+        <textarea id="content" class="form-control mb-2" placeholder="Content"></textarea>
+        <button class="btn btn-warning" onclick="addEntry()">Add Entry</button>
+    </div>
+
+    <div class="card p-3">
+        <button class="btn btn-info mb-2" onclick="loadEntries()">Load Entries</button>
+        <ul id="entries" class="list-group"></ul>
+    </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
